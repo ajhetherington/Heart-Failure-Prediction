@@ -806,7 +806,7 @@ managing to achieve a high true positive and low false positive rate
 across a range of different thresholds. The optimal threshold value is
 chosen to be that which maximized the sum of Specificity % and
 Sensitivity %.
-### Confusion matrix
+### 3.2.4 Confusion matrix
 
 ``` r
 preds <- recode(as.factor(predict(lmod3,data,type = "response") >= optimal_roc),"FALSE" = "Negative","TRUE" = "Positive")
