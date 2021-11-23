@@ -799,13 +799,14 @@ c(optimal_roc,sens,spec)
 
     ## [1]  0.4557379 91.3214990 82.4390244
 
-Comparing the two plots, we see no discernable difference between the
+Examining the above plot, we see no discernable difference between the
 first and last model, with very similar ROC curves and AUC’s. The high
 AUC values show that the model does a good job in classification,
 managing to achieve a high true positive and low false positive rate
 across a range of different thresholds. The optimal threshold value is
 chosen to be that which maximized the sum of Specificity % and
-Sensitivity %. ### Confusion matrix
+Sensitivity %.
+### Confusion matrix
 
 ``` r
 preds <- recode(as.factor(predict(lmod3,data,type = "response") >= optimal_roc),"FALSE" = "Negative","TRUE" = "Positive")
